@@ -37,3 +37,7 @@ To use or run a particular program, follow the instructions provided in the resp
 gcc program.c -o program
 ./program
 ```
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE).
