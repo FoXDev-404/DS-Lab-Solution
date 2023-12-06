@@ -11,7 +11,7 @@ This repository contains solutions to the Data Structures (DS) Lab programs as a
 
 ## Introduction
 
-This repository serves as a compilation of my solutions to the Data Structures Lab programs during my second year of B.Tech. Each program is implemented in C language and aims to demonstrate understanding and proficiency in various data structures and algorithms.
+This repository, authored by Rajpal Nishad, serves as a compilation of my solutions to the Data Structures Lab programs during my second year of B.Tech. Each program is implemented in C language and aims to demonstrate understanding and proficiency in various data structures and algorithms.
 
 ## List of Programs
 
