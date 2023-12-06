@@ -1,4 +1,4 @@
-// Write a advanced program to implement Tower of Hanoi using recursion and output looks great.
+// Write a program to implement Tower of Hanoi using recursion in C.
 // Author: Rajpal Nishad, Roll No. 2200950100066
 
 #include <stdio.h>
