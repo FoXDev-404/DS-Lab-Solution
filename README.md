@@ -7,6 +7,7 @@ This repository contains solutions to the Data Structures (DS) Lab programs as a
 - [Introduction](#introduction)
 - [List of Programs](#list-of-programs)
 - [How to Use](#how-to-use)
+- [License](#License)
 
 ## Introduction
 
@@ -35,3 +36,7 @@ To use or run a particular program, follow the instructions provided in the resp
 ```bash
 gcc program.c -o program
 ./program
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE).
