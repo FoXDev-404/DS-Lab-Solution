@@ -1,6 +1,6 @@
 // Write a program to implement Circular Queue using Array.
 // Name : Rajpal Nishad, Roll No. 2200950100066, ST-CS(B).
-// Date : 30/1/2023.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
