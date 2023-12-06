@@ -27,9 +27,6 @@ This repository serves as a compilation of my solutions to the Data Structures L
 11. **Program to implement Multiplication of 2D array in C.**
 12. **Implementation of a circular queue using an array in C.**
 13. **Program to implement Dequeue in C.**
-   - ...
-
-   <!-- Repeat this structure for each program -->
 
 ## How to Use
 
