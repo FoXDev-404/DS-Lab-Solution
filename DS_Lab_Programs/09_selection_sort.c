@@ -1,4 +1,5 @@
 // Write a program to implement Selection Sort in C.
+// Author: Rajpal Nishad, Roll No. 2200950100066, ST-CS(B).
 
 #include <stdio.h>
 #include <stdlib.h>
