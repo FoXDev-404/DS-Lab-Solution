@@ -7,7 +7,7 @@ This repository contains solutions to the Data Structures (DS) Lab programs as a
 - [Introduction](#introduction)
 - [List of Programs](#list-of-programs)
 - [How to Use](#how-to-use)
-- [License](#License)
+- [License](#license)
 
 ## Introduction
 
@@ -31,12 +31,12 @@ This repository, authored by Rajpal Nishad, serves as a compilation of my soluti
 
 ## How to Use
 
-To use or run a particular program, follow the instructions provided in the respective program's folder (`DS_Lab_Programs/`). Typically, compile the C code using a C compiler and execute the compiled program.
+To run a specific program, navigate to the corresponding program's folder (`DS_Lab_Programs/ProgramX/`). Follow these steps:
 
-```bash
-gcc program.c -o program
-./program
-```
+1. Compile the C code using a C compiler (e.g., `gcc program.c -o program`).
+3. Run the compiled program (`./program`).
+
+Note: Ensure you have a C compiler installed on your system, such as GCC.
 
 ## License
 
