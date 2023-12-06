@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 
 #define MAX 5
 
@@ -11,62 +10,52 @@ int dequeue[MAX], front = -1, rear = -1;
 void insert_rear()
 {
     int item;
-    if (rear == MAX - 1)
-        printf("Queue Overflow\n");
+    printf("Enter the element to be inserted: ");
+    scanf("%d", &item);
+    if (front == -1)
+    {
+        front = 0;
+        rear = 0;
+        dequeue[rear] = item;
+    }
     else
     {
-        printf("Enter the element to be inserted: ");
-        scanf("%d", &item);
-        if (front == -1)
-        {
-            front = 0;
-            rear = 0;
-            dequeue[rear] = item;
-        }
-        else
-        {
-            rear = rear + 1;
-            dequeue[rear] = item;
-        }
+        rear = (rear + 1) % MAX;
+        dequeue[rear] = item;
     }
 }
 
 void delete_rear()
 {
     int item;
-    if (front == -1)
+    if (front == rear)
     {
-        printf("Queue Underflow\n");
+        item = dequeue[rear];
+        rear = -1;
+        front = -1;
     }
     else
     {
-        if (rear == front)
-        {
-            item = dequeue[rear];
-            rear = -1;
-            front = -1;
-            printf("The deleted element is %d\n", item);
-        }
-        else
-        {
-            item = dequeue[rear];
-            rear = rear - 1;
-            printf("The deleted element is %dn", item);
-        }
+        item = dequeue[rear];
+        rear = (rear - 1 + MAX) % MAX;
     }
+    printf("The deleted element is %d\n", item);
 }
 
 void insert_front()
 {
     int item;
-    if (front == 0)
-        printf("\nYour queue is full from front\n");
-
+    printf("Enter the element to be inserted: ");
+    scanf("%d", &item);
+    if (front == -1)
+    {
+        front = 0;
+        rear = 0;
+        dequeue[front] = item;
+    }
     else
     {
-        printf("Enter the element to be inserted: ");
-        scanf("%d", &item);
-        front = front - 1;
+        front = (front - 1 + MAX) % MAX;
         dequeue[front] = item;
     }
 }
@@ -74,36 +63,38 @@ void insert_front()
 void delete_front()
 {
     int item;
-    if (front == -1)
-        printf("Queue Underflow\n");
+    if (front == rear)
+    {
+        item = dequeue[front];
+        front = -1;
+        rear = -1;
+    }
     else
     {
-        if (front == rear)
-        {
-            item = dequeue[front];
-            front = -1;
-            rear = -1;
-            printf("The deleted element is %d\n", item);
-        }
-        else
-        {
-            item = dequeue[front];
-            front = front + 1;
-            printf("The deleted element is %d\n", item);
-        }
+        item = dequeue[front];
+        front = (front + 1) % MAX;
     }
+    printf("The deleted element is %d\n", item);
 }
 
 void display()
 {
-    int i;
-    for (i = front; i <= rear; i++)
+    if (front == -1)
     {
-        printf("%d\n", dequeue[i]);
+        printf("Queue is empty\n");
+    }
+    else
+    {
+        int i = front;
+        do
+        {
+            printf("%d\n", dequeue[i]);
+            i = (i + 1) % MAX;
+        } while (i != (rear + 1) % MAX);
     }
 }
 
-void main()
+int main()
 {
     int choice;
     char ch;
@@ -118,6 +109,7 @@ void main()
         printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
+
         switch (choice)
         {
         case 1:
@@ -141,8 +133,10 @@ void main()
         default:
             printf("Invalid choice\n");
         }
+
         printf("Do you want to continue? (y/n): ");
         scanf(" %c", &ch);
     } while (ch == 'y' || ch == 'Y');
-    getch();
+
+    return 0;
 }
