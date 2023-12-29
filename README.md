@@ -1,4 +1,4 @@
-# STCS Data Structures Lab Programs
+# Data Structures Lab Programs
 
 This repository contains solutions to the Data Structures (DS) Lab programs as a part of the B.Tech curriculum in the second year.
 
